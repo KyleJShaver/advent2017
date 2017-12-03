@@ -26,7 +26,7 @@ func ChecksumPart2(input [][]int) int {
 	total, multiple, factor := 0, 0, 0
 	for i := 0; i < len(input); i++ {
 		row := input[i]
-		for j := 0; j < len(row) - 1; j++ {
+		for j := 0; j < len(row)-1; j++ {
 			for k := j + 1; k < len(row); k++ {
 				if row[k] < row[j] {
 					factor = row[k]
@@ -35,7 +35,7 @@ func ChecksumPart2(input [][]int) int {
 					factor = row[j]
 					multiple = row[k]
 				}
-				if multiple % factor == 0 {
+				if multiple%factor == 0 {
 					k = len(row)
 					j = k
 					total += multiple / factor
