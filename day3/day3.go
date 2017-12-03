@@ -91,8 +91,8 @@ func SpiralMemoryPart2(input int) int {
 			break
 		}
 		if delta >= 0 {
-			size[0] += 6
-			size[1] += 6
+			size[0] += 4
+			size[1] += 4
 			return memoryWithSize(size, input)
 		}
 		degrees = (degrees + 90) % 360

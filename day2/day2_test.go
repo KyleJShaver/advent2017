@@ -10,6 +10,12 @@ type Example struct {
 	output int
 }
 
+type ExampleRefactor struct {
+	input  [][]int
+	part1 int
+	part2 int
+}
+
 var personalData = [][]int{
 	{116, 1259, 1045, 679, 1334, 157, 277, 1217, 218, 641, 1089, 136, 247, 1195, 239, 834},
 	{269, 1751, 732, 3016, 260, 6440, 5773, 4677, 306, 230, 6928, 7182, 231, 2942, 2738, 3617},
@@ -39,6 +45,12 @@ var examplesPart2 = []Example{
 	{input: personalData, output: 226},
 }
 
+var examplesRefactor = []ExampleRefactor{
+	{input: [][]int{{5, 17, 9, 10}, {7, 5, 3, 6}, {2, 13, 7, 8}}, part1: 27, part2: 8},
+	{input: [][]int{{5, 9, 2, 8}, {9, 4, 7, 3}, {3, 8, 6, 5}}, part1: 18, part2: 9},
+	{input: personalData, part1: 41887, part2:  226},
+}
+
 func TestChecksumPart1(t *testing.T) {
 	for i := 0; i < len(examplesPart1); i++ {
 		example := examplesPart1[i]
@@ -55,6 +67,16 @@ func TestChecksumPart2(t *testing.T) {
 		res := ChecksumPart2(example.input)
 		if res != example.output {
 			t.Error(fmt.Sprintf("Expected %d, but got %d", example.output, res))
+		}
+	}
+}
+
+func TestChecksumRefactor(t *testing.T) {
+	for i := 0; i < len(examplesRefactor); i++ {
+		example := examplesRefactor[i]
+		resPart1, resPart2 := ChecksumRefactor(example.input)
+		if resPart1 != example.part1 || resPart2 != example.part2 {
+			t.Error(fmt.Sprintf("Expected %d, %d but got %d, %d", example.part1, example.part2, resPart1, resPart2))
 		}
 	}
 }
