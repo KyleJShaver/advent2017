@@ -11,7 +11,7 @@ type Example struct {
 }
 
 type ExampleRefactor struct {
-	input  string
+	input string
 	part1 int32
 	part2 int32
 }
@@ -35,7 +35,7 @@ var examplesPart2 = []Example{
 	{input: personalData, output: 950},
 }
 
-var examplesRefactor = []ExampleRefactor {
+var examplesRefactor = []ExampleRefactor{
 	{input: "1122", part1: 3, part2: 0},
 	{input: "123425", part1: 0, part2: 4},
 	{input: "91212129", part1: 9, part2: 6},

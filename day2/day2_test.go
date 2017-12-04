@@ -11,7 +11,7 @@ type Example struct {
 }
 
 type ExampleRefactor struct {
-	input  [][]int
+	input [][]int
 	part1 int
 	part2 int
 }
@@ -48,7 +48,7 @@ var examplesPart2 = []Example{
 var examplesRefactor = []ExampleRefactor{
 	{input: [][]int{{5, 17, 9, 10}, {7, 5, 3, 6}, {2, 13, 7, 8}}, part1: 27, part2: 8},
 	{input: [][]int{{5, 9, 2, 8}, {9, 4, 7, 3}, {3, 8, 6, 5}}, part1: 18, part2: 9},
-	{input: personalData, part1: 41887, part2:  226},
+	{input: personalData, part1: 41887, part2: 226},
 }
 
 func TestChecksumPart1(t *testing.T) {

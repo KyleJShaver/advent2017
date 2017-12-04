@@ -1,8 +1,8 @@
 package day4
 
 import (
-	"strings"
 	"sort"
+	"strings"
 )
 
 func ValidPassphrases(input string) (int, int) {

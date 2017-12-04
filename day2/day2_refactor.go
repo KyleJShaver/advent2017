@@ -2,7 +2,7 @@ package day2
 
 import "math"
 
-func ChecksumRefactor(input[][]int) (int, int) {
+func ChecksumRefactor(input [][]int) (int, int) {
 	part1, part2, smallest, largest, multiple, factor := 0, 0, 0, 0, 0, 0
 	for _, row := range input {
 		smallest = int(math.MaxInt32)
