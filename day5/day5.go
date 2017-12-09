@@ -21,4 +21,3 @@ func Trampolines(input []int) (int, int) {
 	}
 	return parts[0], parts[1]
 }
-
